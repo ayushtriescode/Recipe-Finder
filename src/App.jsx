@@ -47,7 +47,7 @@ function App() {
         <h1 className="text-5xl font-black mb-4 tracking-tighter">
           RECIPE <span className="text-[#4f7942]">FINDER</span>
         </h1>
-        <div className="flex gap-2 p-2 bg-white/50 backdrop-blur-lg rounded-2xl border border-white shadow-xl">
+        <div className="flex flex-col md:flex-row gap-2 p-2 bg-white/50 backdrop-blur-lg rounded-2xl border border-white shadow-xl">
           <input
             type="text"
             placeholder="Search for a Recipe... (ex: Pizza)"
