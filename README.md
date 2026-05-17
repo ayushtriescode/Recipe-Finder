@@ -1,16 +1,43 @@
-# React + Vite
+# Recipe Finder 🍳
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, visually striking frontend web application designed for browsing, searching, and saving your favorite meals. Built to practice state synchronization, API integration, and user-state retention using browser memory.
 
-Currently, two official plugins are available:
+💻 **Live Demo:** [ayushtriescode.github.io/Recipe-Finder/](https://ayushtriescode.github.io/Recipe-Finder/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Real-Time Data Fetching:** Integrates with TheMealDB API to fetch instant recipe data matching user search input.
+- **Persistent Favorites:** Users can "Heart" their favorite recipes. State is mapped directly to `LocalStorage`, meaning favorites persist even after a complete browser refresh.
+- **Premium Custom UI:** Styled with a "Cyber-Cabbage" color palette (fresh greens on a clean cream background) utilizing Tailwind CSS v4.
+- **Glassmorphism Design:** A frosted-glass header layout featuring modern backdrop blurring effects.
+- **UX Enhancements:** Implemented an keyboard event listener enabling users to execute searches seamlessly using the `Enter` key.
+- **Fully Responsive:** Designed with a mobile-first approach utilizing fluid Tailwind grid mechanics.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Framework:** React.js (Functional Components & Hooks)
+- **Styling:** Tailwind CSS v4 (Glassmorphism & Custom Palettes)
+- **Data Source:** TheMealDB API
+- **Deployment:** GitHub Pages
+
+---
+
+## 🧠 Core Learnings & Concepts Practiced
+
+1. **Data Architecture:** Structuring decoupled states to separate transient search results (`recipes`) from persistent user items (`favorites`).
+2. **React Hooks:**
+   - `useState` lazily initialized with a callback function to extract data from memory immediately upon mount, preventing state race conditions.
+   - `useEffect` to watch the active favorites array and synchronize data seamlessly into plain-text JSON strings.
+3. **Event Optimization:** Leveraging conditional checks (`e.key === "Enter"`) inside keyboard hooks to prevent repetitive interface code.
+
+---
+
+## 🚀 How to Run Locally
+
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/ayushtriescode/Recipe-Finder.git](https://github.com/ayushtriescode/Recipe-Finder.git)
